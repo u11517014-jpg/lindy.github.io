@@ -3,56 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>個人作品集 | Portfolio</title>
+    <title>林庭妤 | 個人作品集 Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: sans-serif; }
-        body { background-color: #f4f7f6; color: #333; line-height: 1.6; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        h1 { color: #2c3e50; margin-bottom: 10px; }
-        p.subtitle { color: #7f8c8d; font-size: 1.1em; margin-bottom: 20px; }
-        .section { margin-bottom: 30px; }
-        .section h2 { border-bottom: 2px solid #3498db; padding-bottom: 5px; color: #2980b9; margin-bottom: 15px; }
-        ul { list-style-type: square; padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        .footer { text-align: center; font-size: 0.9em; color: #95a5a6; margin-top: 40px; }
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        .hero-title { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
+        .hero-subtitle { font-size: 1.2rem; color: #94a3b8; margin-bottom: 25px; }
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn:hover { background: var(--secondary-color); transform: translateY(-2px); }
+
+        /* Main Container */
+        .container { max-width: 900px; margin: -40px auto 60px; padding: 0 20px; }
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #0f172a;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        h2 i { color: var(--primary-color); }
+
+        /* Grid & Skills */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .skill-item {
+            background: #f1f5f9;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-weight: 500;
+            color: #334155;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Project Cards */
+        .project-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s ease;
+        }
+        .project-card:hover { border-color: var(--primary-color); }
+        .project-title { font-size: 1.1rem; font-weight: 600; color: #0f172a; margin-bottom: 5px; }
+        .project-desc { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Contact Info */
+        .contact-list { list-style: none; }
+        .contact-list li { margin-bottom: 12px; display: flex; align-items: center; gap: 12px; color: #334155; }
+        .contact-list i { color: var(--primary-color); width: 20px; }
+
+        footer { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding: 20px; }
     </style>
 </head>
 <body>
+
+    <header>
+        <h1 class="hero-title">林庭妤 (Lindy)</h1>
+        <p class="hero-subtitle">學材系 大一學生 | 未來數位內容與網頁專案管理者</p>
+        <a href="#contact" class="btn">聯絡我</a>
+    </header>
+
     <div class="container">
-        <h1>[你的名字] 的個人作品集</h1>
-        <p class="subtitle">大學生 / 未來資深專家 | [你的學系名稱]</p>
-
-        <div class="section">
-            <h2>關於我</h2>
-            <p>我是 [你的名字]，目前就讀於 [你的學校/學系] 大一。對 [你的興趣領域，例如：網頁開發/設計/數據分析] 充滿熱情，積極在大學四年間積累實務專案經驗。</p>
+        <div class="card">
+            <h2><i class="fa-solid fa-user"></i> 關於我</h2>
+            <p>你好！我是林庭妤，目前就讀於學習與數位媒材設計學系大一。對網頁開發、數位內容設計與專案管理充滿熱情，致力於在大學四年間透過實務專案積累技術與作品。</p>
         </div>
 
-        <div class="section">
-            <h2>個人技能</h2>
-            <ul>
-                <li>核心能力：[例如：HTML/CSS/JavaScript, Python, 基礎設計]</li>
-                <li>軟實力：團隊合作、問題解決、快速學習</li>
-                <li>語言能力：中文（母語）、英文（中等）</li>
+        <div class="card">
+            <h2><i class="fa-solid fa-code"></i> 專業技能</h2>
+            <div class="skills-grid">
+                <div class="skill-item"><i class="fa-brands fa-html5"></i> HTML5 / CSS3</div>
+                <div class="skill-item"><i class="fa-brands fa-github"></i> Git / GitHub</div>
+                <div class="skill-item"><i class="fa-solid fa-pen-nib"></i> 數位內容設計</div>
+                <div class="skill-item"><i class="fa-solid fa-users"></i> 團隊合作與溝通</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fa-solid fa-folder-open"></i> 專案經歷</h2>
+            <div class="project-card">
+                <div class="project-title">個人作品集網站 (Portfolio Site)</div>
+                <div class="project-desc">使用 HTML/CSS 搭配 GitHub Pages 自動化部署建置個人品牌門面，作為大學四年成果展現的起點。</div>
+            </div>
+            <div class="project-card">
+                <div class="project-title">學材系課程專案 (籌備中)</div>
+                <div class="project-desc">預計於大一至大二期間參與數位媒體設計與學習工具開發專案。</div>
+            </div>
+        </div>
+
+        <div class="card" id="contact">
+            <h2><i class="fa-solid fa-envelope"></i> 聯絡資訊</h2>
+            <ul class="contact-list">
+                <li><i class="fa-solid fa-envelope"></i> Email: your-email@gmail.com</li>
+                <li><i class="fa-brands fa-github"></i> GitHub: github.com/u11517014-jpg</li>
             </ul>
-        </div>
-
-        <div class="section">
-            <h2>專案經歷 (持續更新中)</h2>
-            <ul>
-                <li><strong>個人作品集網站：</strong> 使用 HTML/CSS 與 GitHub Pages 建置個人品牌門面。</li>
-                <li><strong>[預留未來專案名稱]：</strong> [簡單說明未來大二/大三預計開發的內容]。</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>聯絡方式</h2>
-            <p>Email: your-email@example.com</p>
-            <p>GitHub: github.com/your-username</p>
-        </div>
-
-        <div class="footer">
-            &copy; 2026 [你的名字]. All Rights Reserved.
         </div>
     </div>
+
+    <footer>
+        &copy; 2026 林庭妤. All Rights Reserved. Powered by GitHub Pages.
+    </footer>
+
 </body>
 </html>
