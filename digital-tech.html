@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數位科技概論 | 課程成果紀錄</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-color: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-color); line-height: 1.6; }
+
+        header {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .header-title { font-size: 2rem; font-weight: 700; margin-bottom: 8px; }
+        .header-subtitle { color: #94a3b8; font-size: 1.05rem; }
+
+        .container { max-width: 900px; margin: 30px auto; padding: 0 20px; }
+        
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .back-btn:hover { text-decoration: underline; }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 10px;
+        }
+        h2 i { color: var(--primary-color); }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 15px;
+        }
+
+        .activity-item {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 15px 20px;
+        }
+        .activity-title { font-weight: 600; color: #0f172a; margin-bottom: 5px; }
+        .activity-desc { font-size: 0.9rem; color: var(--text-muted); }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        th { background-color: #f1f5f9; color: #334155; }
+
+        footer { text-align: center; color: var(--text-muted); font-size: 0.9rem; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="header-title">數位科技概論 課程成果集</h1>
+        <p class="header-subtitle">第二週：Git/GitHub 工作流、HTML5 語意化與 CSS 排版實務</p>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> 返回個人作品集</a>
+
+        <!-- 課程總覽與學習目標 -->
+        <div class="card">
+            <h2><i class="fa-solid fa-book-open"></i> 課程總覽與版本控管</h2>
+            <p style="margin-bottom: 15px;">本課程核心在於建立標準的現代 Web 開發流程。透過 GitHub 工作流進行專案佈署，並掌握網頁 HTML 語意化設計與 CSS 樣式排版基礎。</p>
+            <div class="grid-2">
+                <div class="activity-item">
+                    <div class="activity-title"><i class="fa-brands fa-github"></i> GitHub Pages 部署</div>
+                    <div class="activity-desc">練習正確上傳解壓檔案至根目錄，避免無效資料夾包裝與 ZIP 檔案誤傳。</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-title"><i class="fa-solid fa-folder-tree"></i> 相對路徑觀念</div>
+                    <div class="activity-desc">嚴格使用相對路徑引用資源（如圖片、影音），確保網頁跨平台順利渲染。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- HTML4 大實作活動 -->
+        <div class="card">
+            <h2><i class="fa-brands fa-html5"></i> HTML5 語意化獨立實作 (活動 01-04)</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>活動名稱</th>
+                        <th>重點技術與標籤</th>
+                        <th>成果檔案與說明</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>活動 01：文字層級</b></td>
+                        <td><code>h1~h3</code>, <code>p</code>, <code>b</code>, <code>i</code>, <code>sub</code>, <code>sup</code></td>
+                        <td>「水與生活：小小科學探索日」網頁</td>
+                    </tr>
+                    <tr>
+                        <td><b>活動 02：多媒體運用</b></td>
+                        <td><code>img</code> (alt/width), <code>audio</code>, <code>video</code></td>
+                        <td>校園自然觀察任務卡 (整合 PNG/SVG 及音效/影片)</td>
+                    </tr>
+                    <tr>
+                        <td><b>活動 03：清單與表格</b></td>
+                        <td><code>ul</code>, <code>ol</code>, <code>table</code>, <code>tr</code>, <code>th</code>, <code>td</code></td>
+                        <td>紙橋挑戰社：活動準備頁 (包含材料、步驟與分工表)</td>
+                    </tr>
+                    <tr>
+                        <td><b>活動 04：互動表單</b></td>
+                        <td><code>label</code>, <code>input</code>, <code>select</code>, <code>radio</code>, <code>checkbox</code></td>
+                        <td>放學後社團體驗表 (包含完整的輸入元件與驗證)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- CSS 視覺排版與無障礙設計 -->
+        <div class="card">
+            <h2><i class="fa-brands fa-css3-alt"></i> CSS 視覺樣式與無障礙設計 (活動 05-09)</h2>
+            <div class="grid-2">
+                <div class="activity-item">
+                    <div class="activity-title">活動 05：視覺風格與盒模型</div>
+                    <div class="activity-desc">掌握 Padding, Margin, HEX 顏色碼與 <code>05-color-lab</code> 色彩實驗室運用。</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-title">活動 06：CSS Grid 網格佈局</div>
+                    <div class="activity-desc">比較單欄、雙欄、三欄與側欄主內容版型，靈活使用 <code>fr</code> 與 <code>minmax()</code>。</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-title">活動 07：Flexbox 卡片排列</div>
+                    <div class="activity-desc">彈性排列卡片，搭配 <code>object-fit: cover</code> 確保圖片等高且不變形。</div>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-title">活動 08：RWD 響應式佈局</div>
+                    <div class="activity-desc">設定 <code>max-width</code> 搭配 Media Query <code>@media (max-width: 600px)</code> 適應行動裝置。</div>
+                </div>
+                <div class="activity-item" style="grid-column: 1 / -1;">
+                    <div class="activity-title"><i class="fa-solid fa-universal-access"></i> 活動 09：Web 無障礙設計 (Accessibility)</div>
+                    <div class="activity-desc">使用 WAVE 工具進行機檢，修復 Low Contrast 文字對比度與缺失 Form Label 的問題，並補全 <code>:focus-visible</code> 鍵盤無障礙焦點。</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 林庭妤. All Rights Reserved. Powered by GitHub Pages.
+    </footer>
+
+</body>
+</html>
