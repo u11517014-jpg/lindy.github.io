@@ -80,11 +80,28 @@
             border-radius: 12px;
             padding: 20px;
             margin-bottom: 15px;
-            transition: border-color 0.3s ease;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
-        .project-card:hover { border-color: var(--primary-color); }
-        .project-title { font-size: 1.1rem; font-weight: 600; color: #0f172a; margin-bottom: 5px; }
+        .project-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+        .project-title { 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            color: #0f172a; 
+            margin-bottom: 5px; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+        }
         .project-desc { color: var(--text-muted); font-size: 0.95rem; }
+        .tag-group { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+        .tag { font-size: 0.75rem; background: #e0f2fe; color: #0369a1; padding: 3px 10px; border-radius: 20px; font-weight: 500; }
 
         /* Contact Info */
         .contact-list { list-style: none; }
@@ -120,10 +137,27 @@
 
         <div class="card">
             <h2><i class="fa-solid fa-folder-open"></i> 專案經歷</h2>
+            
+            <!-- 新增：數位科技概論卡片 -->
+            <a href="digital-tech.html" class="project-card">
+                <div class="project-title">
+                    數位科技概論 (Introduction to Digital Technology)
+                    <i class="fa-solid fa-chevron-right" style="font-size: 0.9rem; color: var(--primary-color);"></i>
+                </div>
+                <div class="project-desc">涵蓋 GitHub 版本控管實務、HTML5 語意化元件開發、CSS 響應式排版（RWD）與 Web 無障礙設計（Accessibility）之系列課程與作品累積。</div>
+                <div class="tag-group">
+                    <span class="tag">HTML5 / CSS3</span>
+                    <span class="tag">GitHub Pages</span>
+                    <span class="tag">RWD</span>
+                    <span class="tag">無障礙設計</span>
+                </div>
+            </a>
+
             <div class="project-card">
                 <div class="project-title">個人作品集網站 (Portfolio Site)</div>
                 <div class="project-desc">使用 HTML/CSS 搭配 GitHub Pages 自動化部署建置個人品牌門面，作為大學四年成果展現的起點。</div>
             </div>
+            
             <div class="project-card">
                 <div class="project-title">學材系課程專案 (籌備中)</div>
                 <div class="project-desc">預計於大一至大二期間參與數位媒體設計與學習工具開發專案。</div>
